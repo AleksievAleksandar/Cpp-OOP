@@ -1,16 +1,11 @@
 #include "StringWrapper.h"
 #include <iostream>
-#include <sstream>
 #include <string>
 
 Input readInput()
 {
-	std::string line;
-	std::getline(std::cin, line);
-	std::istringstream iss(line);
-
 	Input input;
-	iss >> input.line >> input.letter >> input.repetitions;
+	std::cin >> input.line >> input.letter >> input.repetitions;
 
 	return input;
 }
